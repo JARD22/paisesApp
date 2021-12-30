@@ -1,2 +1,20 @@
-<h2>Ver Pais</h2>
-      <hr>
+
+<div class="alert alert-info mt-3" *ngIf="!pais; else divPais">
+      <small>Espere...</small>
+</div>
+
+
+<ng-template #divPais>  
+    <div class="row" >
+      <div class="col-lg-12">
+            <h1>País <small>{{pais.name.common}}</small></h1>
+      </div>
+</div>
+
+      <div class="row">
+            <div class="col-lg-4">
+                  <h3>bandera</h3>
+            </div>
+      </div>
+
+</ng-template>
